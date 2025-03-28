@@ -1,3 +1,9 @@
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # Loads the .env file
+TOKEN = os.getenv('DISCORD_TOKEN')  # Gets the token from .env
+
 from flask import Flask
 from threading import Thread
 import discord
