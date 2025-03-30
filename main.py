@@ -43,3 +43,8 @@ async def on_ready():
 async def on_message(message):
     if message.channel.id in CHANNEL_IDS:
         if message.attachments:
+            for attachment in message.attachments:
+                # Add code here to process the attachment
+                print(f"Attachment found: {attachment.url}")
+                # You can download or do something else with the attachment here
+    await bot.process_commands(message)  # Make sure other commands are processed
