@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()  # Loads the .env file
-TOKEN = os.getenv('DISCORD_TOKEN')  # Gets the token from .env
+TOKEN = os.getenv('DISCORD_TOKEN')  # Gets the token from Railway variables
 
 from flask import Flask
 from threading import Thread
@@ -10,7 +10,6 @@ import discord
 from discord.ext import commands
 
 # ==== CONFIGURATION ====
-TOKEN = ""
 CHANNEL_IDS = [1326800912098005012, 1326801008239575080]
 REACTIONS = ["<:Downvote:1341850508540907581>", "<:Upvote:1341850570214080582>"]
 
