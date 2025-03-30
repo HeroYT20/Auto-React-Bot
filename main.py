@@ -43,9 +43,3 @@ async def on_ready():
 async def on_message(message):
     if message.channel.id in CHANNEL_IDS:
         if message.attachments:
-            for emoji in REACTIONS:
-                await message.add_reaction(emoji)
-    await bot.process_commands(message)
-
-keep_alive()
-bot.run(TOKEN)
